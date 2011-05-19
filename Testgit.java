@@ -1,4 +1,8 @@
 class Testgit{
 
+	int getTest(){
+	}
+
+
 }
 
