@@ -69,7 +69,9 @@
 				"
 			>
 			<tr>
-				<td colspan=4>Vous êtes sur la page 1.</td>
+				<td colspan=4>
+				<%= request.getAttribute("nom") %>
+				Vous êtes sur la page 1.</td>
 			</tr>
 		</tbody>
 	</table>

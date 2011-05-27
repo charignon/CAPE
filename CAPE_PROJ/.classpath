@@ -8,5 +8,7 @@
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
 	<classpathentry kind="src" path="WEB-INF/src"/>
 	<classpathentry kind="src" output="work" path="work"/>
+	<classpathentry kind="lib" path="sqlitejdbc-v056.jar"/>
+	<classpathentry kind="lib" path="/home/laurent/Téléchargements/apache-tomcat-7.0.14/webapps/CAPE_PROJ/sqlitejdbc-v056.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>
