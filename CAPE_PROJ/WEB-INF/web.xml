@@ -1,0 +1,48 @@
+<web-app>
+
+	<servlet>
+		<servlet-class>com.sdz.servlet.ConnectionServlet</servlet-class>
+		<servlet-name>connexionServlet</servlet-name>
+	</servlet>
+	
+	<servlet>
+		<servlet-class>com.sdz.servlet.DisconnectServlet</servlet-class>
+		<servlet-name>deconnexionServlet</servlet-name>
+	</servlet>
+			
+	<servlet-mapping>
+		<servlet-name>connexionServlet</servlet-name>
+		<url-pattern>/connexion.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>deconnexionServlet</servlet-name>
+		<url-pattern>/disconnect.do</url-pattern>
+	</servlet-mapping>
+		
+		
+	<error-page>
+  		<error-code>404</error-code>
+  		<location>/404.jsp</location>
+	</error-page>
+	
+	<error-page>
+  		<exception-type>com.sdz.exception.ConnexionException</exception-type>
+  		<location>/error.jsp</location>
+	</error-page>
+	
+	<filter>
+		<filter-name>connexionFilter</filter-name>
+		<filter-class>com.sdz.filter.ConnexionFilter</filter-class>
+	</filter>
+		
+	<filter-mapping>
+		<filter-name>connexionFilter</filter-name>
+		<servlet-name>*</servlet-name>
+	</filter-mapping>
+		
+	<welcome-file-list>  		
+  		<welcome-file>connexion.jsp</welcome-file>  		
+	</welcome-file-list>
+	
+</web-app>
